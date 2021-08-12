@@ -1,6 +1,4 @@
 
-DROP DATABASE IF EXISTS `leon_style_db`;
-CREATE DATABASE IF NOT EXISTS `leon_style_db` ;
 USE `leon_style_db`;
 
 DROP TABLE IF EXISTS `wp_commentmeta`;
