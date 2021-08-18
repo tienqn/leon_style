@@ -1,5 +1,16 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The main template file
+ *
+ * @package leonstyle
+ */
+
+get_header();
+?>
     <main class="">
-		<?php get_template_part( 'partials/room_slider' ); ?>
+        <?php get_template_part('/template-parts/content/room_slider') ?>
     </main>
-<?php get_footer(); ?>
+</div>
+
+<?php
+get_footer();
