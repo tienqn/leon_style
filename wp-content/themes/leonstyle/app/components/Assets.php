@@ -1,60 +1,23 @@
 <?php
 
-namespace Leonstyle;
+namespace Leonstyle\components;
+
+use Leonstyle\traits\Singleton;
 
 /**
- * Leontheme_init
+ * Assets
  */
-class Leontheme_init {
-
-    /**
-     * instance
-     *
-     * @var mixed
-     */
-    private static $_instance = NULL;
+class Assets
+{
+    use Singleton;
 
     /**
      * construct
      */
     protected function __construct()
     {
-        $this->setup_hooks();
-    }
-
-    /**
-     * setup_hooks
-     *
-     * @return void
-     */
-    protected function setup_hooks()
-    {
         add_action( 'wp_enqueue_scripts', [$this, 'register_styles'] );
         add_action( 'wp_enqueue_scripts', [$this, 'register_scripts'] );
-        add_theme_support( 'title-tag' );
-        add_theme_support( 'custom-logo', array(
-            'height'               => 100,
-            'width'                => 400,
-            'flex-height'          => true,
-            'flex-width'           => true,
-            'header-text'          => array( 'site-title', 'site-description' ),
-            'unlink-homepage-logo' => true, 
-        ) );
-        add_theme_support( 'custom-background', array() );
-    }
-
-    /**
-     * get_instance
-     *
-     * @return void
-     */
-    public static function get_instance()
-    {
-        if (!isset(self::$_instance)) {
-            self::$_instance = new self();
-        }
-
-        return self::$_instance;
     }
 
     /**

@@ -7,7 +7,7 @@
 
 require get_template_directory() . '/vendor/autoload.php';
 
-use Leonstyle\Leontheme_init;
+use Leonstyle\LEON_THEME;
 
-Leontheme_init::get_instance();
+LEON_THEME::get_instance();
 

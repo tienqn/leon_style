@@ -4,6 +4,8 @@
  *
  * @package leonstyle
  */
+// get_template_part( 'template-parts/header/bootstrap' );
+// get_template_part( 'template-parts/header/default' );
 ?>
 
 <nav class="top-nav">
